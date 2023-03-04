@@ -18,8 +18,10 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-background-color: beige;
+  background-color: beige;
   max-width: 400px; /* Set the maximum width of the container */
   height: auto; /* Set the height of the container to auto */
   margin: auto;
