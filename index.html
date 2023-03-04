@@ -9,11 +9,9 @@
 </head>
 
 <body>
-    <h1>Yow Yow!</h1>
-Sure! Here's an example of how you could use HTML and JavaScript to create a form where the user can select their dog's
-breed from a dropdown list and enter the dog's age in human years:
+    <title>Pet Age Calculator</title>
+    <h1>Pet Age Calculator</h1>
 
-html
 
 <form>
     <label for="humanAge">Enter your dog's age in human years:</label>
@@ -26,6 +24,8 @@ html
         <option value="large">Large</option>
     </select>
     <br><br>
+    <div class="results"></div>
+    
     <button type="button" onclick="calculateDogAge()">Calculate Dog Age</button>
 </form>
 </body>
