@@ -36,3 +36,9 @@ img {
 }
 
 /* End of CSS Reset */
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
