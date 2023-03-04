@@ -3,42 +3,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Indie Flower', cursive;
 }
-
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  border: none;
-  outline: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* End of CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Outfit&display=swap');
 
 body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main{
+   justify-content: center;
 }
