@@ -37,3 +37,7 @@ main {
   margin: auto;
   background-color: beige;
 }
+
+.results{
+  margin-bottom: 1rem;
+}
