@@ -3,18 +3,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Roboto", sans-serif;
 }
 /* End of CSS Reset */
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Outfit&display=swap');
+/* google font import */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Outfit&family=Roboto&display=swap");
 
-body{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: whitesmoke;
 }
 
-main{
-   justify-content: center;
+main {
+  justify-content: center;
+background-color: beige;
+  max-width: 400px; /* Set the maximum width of the container */
+  height: auto; /* Set the height of the container to auto */
+  margin: auto;
+}
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px; /* Set the maximum width of the container */
+  height: auto; /* Set the height of the container to auto */
+  margin: auto;
+  background-color: beige;
 }
