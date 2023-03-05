@@ -20,6 +20,22 @@ function calculateDogAge() {
   ).textContent = `Your ${breed} dog's age in dog years is: ${dogAge}`;
 }
 
+// Calculate cat age function
+function calculateCatAge() {
+  let humanAge = document.getElementById("humanAge").value;
+  let catBreed = document.getElementById("dogBreed").value;
+  let dogAge = null;
+  if (humanAge === 1) {
+    catYears = 15;
+  } else if (humanAge === 2) {
+    catYears = 24;
+  } else {
+    catYears = 24 + (humanAge - 2) * 4;
+  }
+
+  return catYears;
+}
+
 // function to animate the transition of the hidden div
 function animateHiddenDiv(show) {
   let opacity = show ? 0 : 1;
