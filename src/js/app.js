@@ -27,3 +27,11 @@ function toggleHiddenDiv() {
     div.style.display = "none";
   }
 }
+// trigger hidden div on button press. Since only one button so far this should work
+resultsButton.addEventListener("click", function () {
+  if (hiddenDiv.style.display === "none") {
+    hiddenDiv.style.display = "block";
+  } else {
+    hiddenDiv.style.display = "none";
+  }
+});
