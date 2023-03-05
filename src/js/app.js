@@ -1,4 +1,3 @@
-// Define variables
 const resultsButton = document.getElementById("resultsButton");
 const hiddenDiv = document.querySelector(".hiddenDiv");
 
@@ -21,18 +20,26 @@ function calculateDogAge() {
   ).textContent = `Your ${breed} dog's age in dog years is: ${dogAge}`;
 }
 
+// function to animate the transition of the hidden div
+function animateHiddenDiv(show) {
+  let opacity = show ? 0 : 1;
+  hiddenDiv.style.display = "block";
+  let interval = setInterval(() => {
+    opacity += show ? 0.1 : -0.1;
+    hiddenDiv.style.opacity = opacity;
+    if ((show && opacity >= 1) || (!show && opacity <= 0)) {
+      clearInterval(interval);
+      hiddenDiv.style.display = show ? "block" : "none";
+    }
+  }, 50);
+}
+
 // function to toggle hidden div and calculate dog age
 function toggleHiddenDiv() {
   calculateDogAge();
-
-  if (hiddenDiv.style.display === "none") {
-    hiddenDiv.style.display = "block";
-  } else {
-    hiddenDiv.style.display = "none";
-  }
+  let show = hiddenDiv.style.display === "none";
+  animateHiddenDiv(show);
 }
 
 // add event listener to results button
 resultsButton.addEventListener("click", toggleHiddenDiv);
-
-

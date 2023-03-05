@@ -72,4 +72,12 @@ table {
 
   .hiddenDiv{
     display: none;
+     transition: all 0.5s ease-in-out; /* Add transition effect to all properties */
+     margin-top: 2rem;
+     margin-bottom: 2rem;
   }
+
+  .hiddenDiv.show {
+  display: block;
+  opacity: 1;
+}
