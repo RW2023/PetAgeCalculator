@@ -1,5 +1,8 @@
-// Define variables  and functions I guess...?
-// Function to calculate dog age 
+// Define variables
+const resultsButton = document.getElementById("resultsButton");
+const hiddenDiv = document.querySelector(".hiddenDiv");
+
+// Function to calculate dog age
 function calculateDogAge() {
   let humanAge = document.getElementById("humanAge").value;
   let breed = document.getElementById("breed").value;
@@ -18,20 +21,15 @@ function calculateDogAge() {
   ).textContent = `Your ${breed} dog's age in dog years is: ${dogAge}`;
 }
 
-// function to toggle hidden div
+// function to toggle hidden div and calculate dog age
 function toggleHiddenDiv() {
-  var div = document.querySelector(".hiddenDiv");
-  if (div.style.display === "none") {
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-}
-// trigger hidden div on button press. Since only one button so far this should work
-resultsButton.addEventListener("click", function () {
+  calculateDogAge();
+
   if (hiddenDiv.style.display === "none") {
     hiddenDiv.style.display = "block";
   } else {
     hiddenDiv.style.display = "none";
   }
-});
+}
+
+
