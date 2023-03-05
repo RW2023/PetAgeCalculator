@@ -1,4 +1,4 @@
-const resultsButton = document.getElementById("resultsButton");
+const resultsDiv = document.querySelector(".results");
 const hiddenDiv = document.querySelector(".hiddenDiv");
 
 // Function to calculate dog age
@@ -34,12 +34,17 @@ function animateHiddenDiv(show) {
   }, 50);
 }
 
-// function to toggle hidden div and calculate dog age
-function toggleHiddenDiv() {
+// function to show hidden div on mouseenter
+function showHiddenDiv() {
   calculateDogAge();
-  let show = hiddenDiv.style.display === "none";
-  animateHiddenDiv(show);
+  animateHiddenDiv(true);
 }
 
-// add event listener to results button
-resultsButton.addEventListener("click", toggleHiddenDiv);
+// function to hide hidden div on mouseleave
+function hideHiddenDiv() {
+  animateHiddenDiv(false);
+}
+
+// add event listeners to results div
+resultsDiv.addEventListener("mouseenter", showHiddenDiv);
+resultsDiv.addEventListener("click", hideHiddenDiv);
