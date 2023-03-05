@@ -32,4 +32,7 @@ function toggleHiddenDiv() {
   }
 }
 
+// add event listener to results button
+resultsButton.addEventListener("click", toggleHiddenDiv);
+
 
