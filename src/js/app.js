@@ -22,20 +22,20 @@ function calculateDogAge() {
 
 // Calculate cat age function
 function calculateCatAge() {
-  let humanAge = document.getElementById("humanAge").value;
-  let catBreed = document.getElementById("dogBreed").value;
+  let catHumanAge = document.getElementById("catHumanAge").value;
+  let catYear = document.getElementById("catYear").value;
   let catAge = null;
-  if (humanAge === 1) {
-    catYears = 15;
-  } else if (humanAge === 2) {
-    catYears = 24;
+  if (catHumanAge === 1) {
+    catYear = 15;
+  } else if (catHumanAge === 2) {
+    catYear = 24;
   } else {
-    catYears = 24 + (humanAge - 2) * 4;
+    catYear = 24 + (catHumanAge - 2) * 4;
   }
 
     document.querySelector(
     ".results"
-  ).textContent = `Your ${dogBreed} cat's age in cat years is: ${dogAge}`;
+  ).textContent = `Your cat's age in cat years is: ${catAge}`;
 }
 
 

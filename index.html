@@ -22,6 +22,7 @@
       <form>
         <label for="humanAge">Enter your dog's age in human years:</label>
         <input type="number" id="humanAge" name="humanAge">
+        </form>
         <br><br>
         <label for="dogBreed">Select your dog's Breed size:</label>
         <select id="dogBreed" name="dogBreed">
@@ -32,8 +33,13 @@
         <br><br>
         <button id="DogResultsButton" type="DogButton" onclick="calculateDogAge()">See Dog Age!</button>
     </div>
-    <strong>Cat Age Calculator </strong>
     <div id="catAgeCalculator">
+      <strong>Cat Age Calculator </strong>
+      <form>
+        <label for="humanAge">Enter your cat's age in human years:</label>
+        <input type="number" id="catHumanAge" name="humanAge">
+      </form>
+      <br><br>
       <br><br>
       <label for="catYear">Select the year your cat is currently in:</label>
       <select id="catYear" name="catYear">
@@ -131,7 +137,7 @@
     </div>
 
 
-    </form>
+    
   </main>
 </body>
 <footer>
