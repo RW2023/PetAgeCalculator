@@ -24,7 +24,7 @@ function calculateDogAge() {
 function calculateCatAge() {
   let humanAge = document.getElementById("humanAge").value;
   let catBreed = document.getElementById("dogBreed").value;
-  let dogAge = null;
+  let catAge = null;
   if (humanAge === 1) {
     catYears = 15;
   } else if (humanAge === 2) {
@@ -33,8 +33,11 @@ function calculateCatAge() {
     catYears = 24 + (humanAge - 2) * 4;
   }
 
-  return catYears;
+    document.querySelector(
+    ".results"
+  ).textContent = `Your ${dogBreed} cat's age in cat years is: ${dogAge}`;
 }
+
 
 // function to animate the transition of the hidden div
 function animateHiddenDiv(show) {
