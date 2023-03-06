@@ -22,21 +22,22 @@ function calculateDogAge() {
 
 // Calculate cat age function
 function calculateCatAge() {
-  let catHumanAge = document.getElementById("catHumanAge").value;
-  let catYear = document.getElementById("catYear").value;
+  let catHumanAge = parseInt(document.getElementById("catHumanAge").value);
   let catAge = null;
+
   if (catHumanAge === 1) {
-    catYear = 15;
+    catAge = 15;
   } else if (catHumanAge === 2) {
-    catYear = 24;
+    catAge = 24;
   } else {
-    catYear = 24 + (catHumanAge - 2) * 4;
+    catAge = 24 + (catHumanAge - 2) * 4;
   }
 
-    document.querySelector(
+  document.querySelector(
     ".results"
-  ).textContent = `Your cat's age in cat years is: ${catAge}`;
+    ).textContent = `In cat years your cat is ${catAge} years old.`;
 }
+
 
 
 // function to animate the transition of the hidden div
