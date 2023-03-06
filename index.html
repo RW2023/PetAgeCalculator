@@ -6,126 +6,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Ryan E. Wilson">
   <!-- google Font Links -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Outfit&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Outfit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
   <title>Pet Age Calculator</title>
 </head>
 
 <body>
-    <title>Pet Age Calculator</title>
-    <main>
+  <title>Pet Age Calculator</title>
+  <main>
     <h1>Pet Age Calculator</h1>
-<strong>Dog Age Calculator </strong>
-<form>
-    <label for="humanAge">Enter your dog's age in human years:</label>
-    <input type="number" id="humanAge" name="humanAge">
-    <br><br>
-    <label for="dogBreed">Select your dog's Breed size:</label>
-    <select id="dogBreed" name="dogBreed">
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-    </select>
-    <br><br>
-    <button id="resultsButton" type="button" onclick="calculateDogAge()">Click me to See!</button>
-  
-    <div class="results"></div>
-    <div class="hiddenDiv smDogChart" >
-        <div class="content">
-          <p>The common way to calculate a dog's age in "human years" is to multiply the dog's age in years by 7. However, this
-          method is not entirely accurate as a dog's aging process varies based on its breed and size.
-          
-          A more accurate way to estimate a dog's age is to use a breed-specific conversion chart. Here is an example of a chart
-          for small breeds</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Age of dog (in years)</th>
-                <th>Equivalent age in human years</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>24</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>28</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>32</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>36</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>40</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>44</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>48</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>52</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>56</td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>60</td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>64</td>
-              </tr>
-              <tr>
-                <td>13</td>
-                <td>68</td>
-              </tr>
-              <tr>
-                <td>14</td>
-                <td>72</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>76</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-        </div>
+    <div id="dogAgeCalculator">
+      <strong>Dog Age Calculator </strong>
+      <form>
+        <label for="humanAge">Enter your dog's age in human years:</label>
+        <input type="number" id="humanAge" name="humanAge">
+        <br><br>
+        <label for="dogBreed">Select your dog's Breed size:</label>
+        <select id="dogBreed" name="dogBreed">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+        <br><br>
+        <button id="DogResultsButton" type="DogButton" onclick="calculateDogAge()">See Dog Age!</button>
+    </div>
+    <strong>Cat Age Calculator </strong>
+    <div id="catAgeCalculator">
+      <br><br>
+      <label for="catYear">Select the year your cat is currently in:</label>
+      <select id="catYear" name="catYear">
+        <option value="firstYear">First Year</option>
+        <option value="secondYear">Second Year</option>
+        <option value="thirdYear">Third Year</option>
+      </select>
+      <br><br>
+      <button id="CatResultsButton" type="button" onclick="calculateCatAge()">See Cat Age!</button>
     </div>
 
-    
-</form>
-</main>
+    <div class="results"></div>
+    <div class="hiddenDiv smDogChart">
+      <div class="content">
+        <p>The common way to calculate a dog's age in "human years" is to multiply the dog's age in years by 7. However,
+          this
+          method is not entirely accurate as a dog's aging process varies based on its breed and size.
+
+          A more accurate way to estimate a dog's age is to use a breed-specific conversion chart. Here is an example of
+          a chart
+          for small breeds</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Age of dog (in years)</th>
+              <th>Equivalent age in human years</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>36</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>44</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>48</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>52</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>56</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>60</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>68</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>72</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>76</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+
+
+    </form>
+  </main>
 </body>
 <footer>
-    <script src="./src/js/app.js"></script>
-    <script src="/src/js/style.js"></script>
-    <div class="attribution">
+  <script src="./src/js/app.js"></script>
+  <script src="/src/js/style.js"></script>
+  <div class="attribution">
     <!-- <a
         href="https://www.freepik.com/free-psd/group-portrait-adorable-puppies_3730286.htm#query=dog&position=42&from_view=search&track=sph">Image
         by rawpixel.com</a> on Freepik -->
-        </div>
+  </div>
 </footer>
 
 </html>
