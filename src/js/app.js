@@ -4,20 +4,20 @@ const hiddenDiv = document.querySelector(".hiddenDiv");
 // Function to calculate dog age
 function calculateDogAge() {
   let humanAge = document.getElementById("humanAge").value;
-  let breed = document.getElementById("breed").value;
+  let dogBreed = document.getElementById("dogBreed").value;
   let dogAge = null;
 
-  if (breed === "small") {
+  if (dogBreed === "small") {
     dogAge = humanAge * 5;
-  } else if (breed === "medium") {
+  } else if (dogBreed === "medium") {
     dogAge = humanAge * 6;
-  } else if (breed === "large") {
+  } else if (dogBreed === "large") {
     dogAge = humanAge * 7;
   }
 
   document.querySelector(
     ".results"
-  ).textContent = `Your ${breed} dog's age in dog years is: ${dogAge}`;
+  ).textContent = `Your ${dogBreed} dog's age in dog years is: ${dogAge}`;
 }
 
 // Calculate cat age function
