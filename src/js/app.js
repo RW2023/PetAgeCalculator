@@ -35,13 +35,11 @@ function calculateCatAge() {
 
   document.querySelector(
     ".results"
-    ).textContent = `In cat years your cat is ${catAge} years old.`;
+  ).textContent = `In cat years your cat is ${catAge} years old.`;
 }
 
-
-
 // function to animate the transition of the hidden div
-function animateHiddenDiv(show) {
+function animateHiddenDiv(show, hiddenDiv) {
   let opacity = show ? 0 : 1;
   hiddenDiv.style.display = "block";
   let interval = setInterval(() => {
@@ -53,18 +51,27 @@ function animateHiddenDiv(show) {
     }
   }, 50);
 }
+document.addEventListener("DOMContentLoaded", function () {
+  let hiddenDiv = document.getElementById("hiddenDiv");
+  animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
+});
 
 // function to show hidden div on mouseenter
 function showHiddenDiv() {
   calculateDogAge();
-  animateHiddenDiv(true);
+  calculateCatAge();
+  animateHiddenDiv(true, hiddenDiv);
 }
+
+
 
 // function to hide hidden div on mouseleave
 function hideHiddenDiv() {
-  animateHiddenDiv(false);
+  animateHiddenDiv(false, hiddenDiv);
 }
 
 // add event listeners to results div
 resultsDiv.addEventListener("mouseenter", showHiddenDiv);
 resultsDiv.addEventListener("click", hideHiddenDiv);
+
+
