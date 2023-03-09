@@ -7,7 +7,7 @@ const catAgeResults = document.querySelector(".catAgeResults");
 function calculateDogAge() {
   let humanAge = document.getElementById("humanAge").value;
   let dogBreed = document.getElementById("dogBreed").value;
-  let dogAge = null;
+  let dogAge = 0; // Initialize dogAge to 0
 
   if (dogBreed === "small") {
     dogAge = humanAge * 5;
