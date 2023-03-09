@@ -7,10 +7,7 @@ const mediumDogDiv = document.querySelector(".hiddenDiv#mediumDog");
 const largeDogDiv = document.querySelector(".hiddenDiv#largeDog");
 // Get the button element
 const dogButton = document.querySelector("#dogResultsButton");
-const catButton = document.querySelector("#catResultsButton")
-
-
-
+const catButton = document.querySelector("#catResultsButton");
 
 // Function to calculate dog age
 function calculateDogAge() {
@@ -20,19 +17,24 @@ function calculateDogAge() {
 
   if (dogBreed === "small") {
     dogAge = humanAge * 5;
-    animateHiddenDiv(true, smallDogDiv); // Show the smallDogDiv element
+     animateHiddenDiv(false, largeDogDiv);
+    animateHiddenDiv(false, mediumDogDiv);
+    animateHiddenDiv(true, smallDogDiv);  // Show the smallDogDiv element
   } else if (dogBreed === "medium") {
     dogAge = humanAge * 6;
-    animateHiddenDiv(true, mediumDogDiv); // Show the mediumDogDiv element
+    animateHiddenDiv(false, largeDogDiv);
+    animateHiddenDiv(true, mediumDogDiv);
+    animateHiddenDiv(false, smallDogDiv);  // Show the mediumDogDiv element
   } else if (dogBreed === "large") {
     dogAge = humanAge * 7;
-    animateHiddenDiv(true, largeDogDiv); // Show the largeDogDiv element
+    animateHiddenDiv(true, largeDogDiv);
+    animateHiddenDiv(false, mediumDogDiv);
+    animateHiddenDiv(false, smallDogDiv); // Show the largeDogDiv element
   }
 
   document.querySelector(
     ".results"
   ).textContent = `Your ${dogBreed} dog's age in dog years is: ${dogAge}`;
-  
 }
 
 // Calculate cat age function
@@ -59,7 +61,6 @@ dogButton.addEventListener("click", () => {
   hiddenDiv.classList.toggle("show");
 });
 
-// function to animate the transition of the hidden div
 function animateHiddenDiv(show, hiddenDiv) {
   let opacity = show ? 0 : 1;
   hiddenDiv.style.display = "block";
@@ -72,8 +73,12 @@ function animateHiddenDiv(show, hiddenDiv) {
     }
   }, 50);
 }
-// Add event listener to dogBreed element
-dogBreed.addEventListener('change', () => {
+
+// Add event listener to dogBreed selector element. Hide the hiddenDiv element on change
+dogBreed.addEventListener("change", () => {
   // Hide the hiddenDiv element
-  hiddenDiv.style.display = 'none';
+  if (hiddenDiv.classList.contains("show")) {
+    animateHiddenDiv(false, hiddenDiv); // Hide the hiddenDiv element with animation
+  }
 });
+
