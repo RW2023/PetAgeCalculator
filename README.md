@@ -1,6 +1,6 @@
 # Pet Age Calculator
 
-![Pet Age Calculator Screenshot](https://example.com/pet-age-calculator-screenshot.png)
+![Pet Age Calculator Screenshot](/src/img/Screenshot.png)
 
 This is a simple web page that uses JavaScript to calculate the age of your pet. It's a handy tool for pet owners who want to know their pet's age in human years, based on the pet's species and age.
 
