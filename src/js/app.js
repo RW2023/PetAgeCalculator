@@ -54,7 +54,6 @@ function animateHiddenDiv(show, hiddenDiv) {
   }, 50);
 }
 document.addEventListener("DOMContentLoaded", function () {
-  let hiddenDiv = document.getElementById("hiddenDiv");
   animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
 });
 
