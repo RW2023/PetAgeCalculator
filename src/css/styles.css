@@ -1,14 +1,15 @@
+/* google font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,400;0,600;1,200&display=swap');
 /* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 /* End of CSS Reset */
-/* google font import */
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Outfit&family=Roboto&display=swap");
 
+/* rest of stylesheet */
 body {
   display: flex;
   justify-content: center;
