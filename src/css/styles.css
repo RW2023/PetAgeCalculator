@@ -81,3 +81,11 @@ table {
   display: block;
   opacity: 1;
 }
+/* Classes to show or hide smallDog Div */
+.results + #smallDog {
+  display: none;
+}
+
+.results.showSmall + #smallDog {
+  display: block;
+}

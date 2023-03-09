@@ -1,14 +1,18 @@
 const resultsDiv = document.querySelector(".results");
 const hiddenDiv = document.querySelector(".hiddenDiv");
+const dogAgeResults = document.querySelector(".dogAgeResults");
+const catAgeResults = document.querySelector(".catAgeResults");
+const smallDogDiv = document.querySelector(".hiddenDiv#smallDog");
 
 // Function to calculate dog age
 function calculateDogAge() {
   let humanAge = document.getElementById("humanAge").value;
   let dogBreed = document.getElementById("dogBreed").value;
-  let dogAge = null;
+  let dogAge = 0; // Initialize dogAge to 0
 
   if (dogBreed === "small") {
     dogAge = humanAge * 5;
+    animateHiddenDiv(true, smallDogDiv); // Show the smallDogDiv element
   } else if (dogBreed === "medium") {
     dogAge = humanAge * 6;
   } else if (dogBreed === "large") {
@@ -38,6 +42,11 @@ function calculateCatAge() {
   ).textContent = `In cat years your cat is ${catAge} years old.`;
 }
 
+// Show the hiddenDiv element
+document.addEventListener("DOMContentLoaded", function () {
+  animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
+});
+
 // function to animate the transition of the hidden div
 function animateHiddenDiv(show, hiddenDiv) {
   let opacity = show ? 0 : 1;
@@ -52,7 +61,6 @@ function animateHiddenDiv(show, hiddenDiv) {
   }, 50);
 }
 document.addEventListener("DOMContentLoaded", function () {
-  let hiddenDiv = document.getElementById("hiddenDiv");
   animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
 });
 
@@ -71,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 // add event listeners to results div
-resultsDiv.addEventListener("mouseenter", showHiddenDiv);
-resultsDiv.addEventListener("click", hideHiddenDiv);
+// resultsDiv.addEventListener("mouseenter", showHiddenDiv);
+// resultsDiv.addEventListener("click", hideHiddenDiv);
 
 
