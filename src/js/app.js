@@ -16,20 +16,21 @@ function calculateDogAge() {
   let dogAge = ""; // Initialize dogAge to empty string
 
   if (dogBreed === "small") {
-    dogAge = humanAge * 5;
-     animateHiddenDiv(false, largeDogDiv);
-    animateHiddenDiv(false, mediumDogDiv);
-    animateHiddenDiv(true, smallDogDiv);  // Show the smallDogDiv element
-  } else if (dogBreed === "medium") {
-    dogAge = humanAge * 6;
     animateHiddenDiv(false, largeDogDiv);
+    animateHiddenDiv(false, mediumDogDiv);
+    animateHiddenDiv(true, smallDogDiv); // Show the smallDogDiv element
+    dogAge = humanAge * 5;
+  } else if (dogBreed === "medium") {
+     animateHiddenDiv(false, largeDogDiv);
     animateHiddenDiv(true, mediumDogDiv);
     animateHiddenDiv(false, smallDogDiv);  // Show the mediumDogDiv element
+    dogAge = humanAge * 6;
+   
   } else if (dogBreed === "large") {
-    dogAge = humanAge * 7;
     animateHiddenDiv(true, largeDogDiv);
     animateHiddenDiv(false, mediumDogDiv);
     animateHiddenDiv(false, smallDogDiv); // Show the largeDogDiv element
+    dogAge = humanAge * 7;
   }
 
   document.querySelector(
