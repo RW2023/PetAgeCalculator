@@ -15,13 +15,16 @@ function calculateDogAge() {
     animateHiddenDiv(true, smallDogDiv); // Show the smallDogDiv element
   } else if (dogBreed === "medium") {
     dogAge = humanAge * 6;
+    animateHiddenDiv(true, mediumDogDiv); // Show the mediumDogDiv element
   } else if (dogBreed === "large") {
     dogAge = humanAge * 7;
+    animateHiddenDiv(true, largeDogDiv); // Show the largeDogDiv element
   }
 
   document.querySelector(
     ".results"
   ).textContent = `Your ${dogBreed} dog's age in dog years is: ${dogAge}`;
+  
 }
 
 // Calculate cat age function
