@@ -2,6 +2,7 @@ const resultsDiv = document.querySelector(".results");
 const hiddenDiv = document.querySelector(".hiddenDiv");
 const dogAgeResults = document.querySelector(".dogAgeResults");
 const catAgeResults = document.querySelector(".catAgeResults");
+const smallDogDiv = document.querySelector(".hiddenDiv#smallDog");
 
 // Function to calculate dog age
 function calculateDogAge() {
@@ -11,21 +12,17 @@ function calculateDogAge() {
 
   if (dogBreed === "small") {
     dogAge = humanAge * 5;
+    animateHiddenDiv(true, smallDogDiv); // Show the smallDogDiv element
   } else if (dogBreed === "medium") {
     dogAge = humanAge * 6;
   } else if (dogBreed === "large") {
     dogAge = humanAge * 7;
   }
-  
+
   document.querySelector(
     ".results"
   ).textContent = `Your ${dogBreed} dog's age in dog years is: ${dogAge}`;
 }
-
-// Show the hiddenDiv element
-document.addEventListener("DOMContentLoaded", function () {
-  animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
-});
 
 // Calculate cat age function
 function calculateCatAge() {
