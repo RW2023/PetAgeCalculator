@@ -1,5 +1,7 @@
 const resultsDiv = document.querySelector(".results");
 const hiddenDiv = document.querySelector(".hiddenDiv");
+const dogAgeResults = document.querySelector(".dogAgeResults");
+const catAgeResults = document.querySelector(".catAgeResults");
 
 // Function to calculate dog age
 function calculateDogAge() {
