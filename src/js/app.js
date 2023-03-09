@@ -16,11 +16,16 @@ function calculateDogAge() {
   } else if (dogBreed === "large") {
     dogAge = humanAge * 7;
   }
-
+  
   document.querySelector(
     ".results"
   ).textContent = `Your ${dogBreed} dog's age in dog years is: ${dogAge}`;
 }
+
+// Show the hiddenDiv element
+document.addEventListener("DOMContentLoaded", function () {
+  animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
+});
 
 // Calculate cat age function
 function calculateCatAge() {
@@ -39,6 +44,11 @@ function calculateCatAge() {
     ".results"
   ).textContent = `In cat years your cat is ${catAge} years old.`;
 }
+
+// Show the hiddenDiv element
+document.addEventListener("DOMContentLoaded", function () {
+  animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
+});
 
 // function to animate the transition of the hidden div
 function animateHiddenDiv(show, hiddenDiv) {
@@ -72,7 +82,7 @@ function hideHiddenDiv() {
 }
 
 // add event listeners to results div
-resultsDiv.addEventListener("mouseenter", showHiddenDiv);
-resultsDiv.addEventListener("click", hideHiddenDiv);
+// resultsDiv.addEventListener("mouseenter", showHiddenDiv);
+// resultsDiv.addEventListener("click", hideHiddenDiv);
 
 
