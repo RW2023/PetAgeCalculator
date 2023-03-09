@@ -3,6 +3,9 @@ const hiddenDiv = document.querySelector(".hiddenDiv");
 const dogAgeResults = document.querySelector(".dogAgeResults");
 const catAgeResults = document.querySelector(".catAgeResults");
 const smallDogDiv = document.querySelector(".hiddenDiv#smallDog");
+const mediumDogDiv = document.querySelector(".hiddenDiv#mediumDog");
+const largeDogDiv = document.querySelector(".hiddenDiv#largeDog");
+
 
 // Function to calculate dog age
 function calculateDogAge() {
@@ -66,23 +69,3 @@ function animateHiddenDiv(show, hiddenDiv) {
 document.addEventListener("DOMContentLoaded", function () {
   animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
 });
-
-// // function to show hidden div on mouseenter
-// function showHiddenDiv() {
-//   calculateDogAge();
-//   calculateCatAge();
-//   animateHiddenDiv(true, hiddenDiv);
-// }
-
-
-
-// // function to hide hidden div on mouseleave
-// function hideHiddenDiv() {
-//   animateHiddenDiv(false, hiddenDiv);
-// }
-
-// add event listeners to results div
-// resultsDiv.addEventListener("mouseenter", showHiddenDiv);
-// resultsDiv.addEventListener("click", hideHiddenDiv);
-
-
