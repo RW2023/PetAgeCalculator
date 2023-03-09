@@ -67,19 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
   animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
 });
 
-// function to show hidden div on mouseenter
-function showHiddenDiv() {
-  calculateDogAge();
-  calculateCatAge();
-  animateHiddenDiv(true, hiddenDiv);
-}
+// // function to show hidden div on mouseenter
+// function showHiddenDiv() {
+//   calculateDogAge();
+//   calculateCatAge();
+//   animateHiddenDiv(true, hiddenDiv);
+// }
 
 
 
-// function to hide hidden div on mouseleave
-function hideHiddenDiv() {
-  animateHiddenDiv(false, hiddenDiv);
-}
+// // function to hide hidden div on mouseleave
+// function hideHiddenDiv() {
+//   animateHiddenDiv(false, hiddenDiv);
+// }
 
 // add event listeners to results div
 // resultsDiv.addEventListener("mouseenter", showHiddenDiv);
