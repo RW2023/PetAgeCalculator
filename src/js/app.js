@@ -58,9 +58,6 @@ dogButton.addEventListener("click", () => {
   // Toggle the "show" class on the hiddenDiv element
   hiddenDiv.classList.toggle("show");
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//   animateHiddenDiv(true, hiddenDiv); // Show the hiddenDiv element
-// });
 
 // function to animate the transition of the hidden div
 function animateHiddenDiv(show, hiddenDiv) {
@@ -75,3 +72,8 @@ function animateHiddenDiv(show, hiddenDiv) {
     }
   }, 50);
 }
+// Add event listener to dogBreed element
+dogBreed.addEventListener('change', () => {
+  // Hide the hiddenDiv element
+  hiddenDiv.style.display = 'none';
+});
