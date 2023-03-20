@@ -31,3 +31,5 @@ If you'd like to contribute to this project, feel free to submit a pull request 
 ## License
 
 This project is licensed under the MIT License. Feel free to use it however you like!
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9fe7380b-56dc-44d4-8190-929a3f514ea5/deploy-status)](https://app.netlify.com/sites/petagecalc/deploys)
