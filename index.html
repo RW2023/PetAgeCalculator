@@ -16,22 +16,22 @@
 <body>
   <title>Pet Age Calculator</title>
   <main>
-    <h1>Pet Age Calculator</h1>
-    <div id="dogAgeCalculator">
+    <h1 class="app__title">Pet Age Calculator</h1>
+    <div id="dogAgeCalculator" class="calculator__dog">
       <strong>Dog Age Calculator </strong>
       <form>
         <label for="humanAge">Enter your dog's age in human years:</label>
         <input type="number" id="humanAge" name="humanAge">
-        </form>
-        <br><br>
-        <label for="dogBreed">Select your dog's Breed size:</label>
-        <select id="dogBreed" name="dogBreed">
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-        </select>
-        <br><br>
-        <button id="dogResultsButton" type="DogButton" onclick="calculateDogAge()">See Dog Age!</button>
+      </form>
+      <br><br>
+      <label for="dogBreed">Select your dog's Breed size:</label>
+      <select id="dogBreed" name="dogBreed">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+      <br><br>
+      <button id="dogResultsButton" type="DogButton" onclick="calculateDogAge()">See Dog Age!</button>
     </div>
     <div id="catAgeCalculator">
       <strong>Cat Age Calculator </strong>
@@ -54,231 +54,235 @@
     <div class="results">
 
     </div>
+  </main>
+  <!-- create hidden divs for each breed or category to be called when JS comes for them -->
+  <div class="hiddenDiv" id="smallDog"> <!---hidden div for small dog -->
+    <div class="content">
+      <p>For small dogs, the common way to calculate a dog's age in "human years" is to multiply the dog's age in years
+        by 7. However,
+        this
+        method is not entirely accurate as a dog's aging process varies based on its breed and size.
 
-    <!-- create hidden divs for each breed or category to be called when JS comes for them -->
-    <div class="hiddenDiv" id="smallDog"> <!---hidden div for small dog -->
-      <div class="content">
-        <p>For small dogs, the common way to calculate a dog's age in "human years" is to multiply the dog's age in years by 7. However,
-          this
-          method is not entirely accurate as a dog's aging process varies based on its breed and size.
-
-          A more accurate way to estimate a dog's age is to use a breed-specific conversion chart. Here is an example of
-          a chart
-          for small breeds</p>
-          <h3>Small Breeds</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Age of dog (in years)</th>
-              <th>Equivalent age in human years</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>15</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>24</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>28</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>32</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>36</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>40</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>44</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>48</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>52</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>56</td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td>60</td>
-            </tr>
-            <tr>
-              <td>12</td>
-              <td>64</td>
-            </tr>
-            <tr>
-              <td>13</td>
-              <td>68</td>
-            </tr>
-            <tr>
-              <td>14</td>
-              <td>72</td>
-            </tr>
-            <tr>
-              <td>15</td>
-              <td>76</td>
-            </tr>
-          </tbody>
-        </table>
+        A more accurate way to estimate a dog's age is to use a breed-specific conversion chart. Here is an example of
+        a chart
+        for small breeds</p>
+      <h3>Small Breeds</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Age of dog (in years)</th>
+            <th>Equivalent age in human years</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>36</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>44</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>48</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>52</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>56</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>64</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>68</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>72</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>76</td>
+          </tr>
+        </tbody>
+      </table>
 
 
-      </div>
     </div>
-
-    <div class="hiddenDiv" id="mediumDog"> <!---hidden div for medium dog -->
-      <div class="content">
-        <p>
-<p>For medium dogs, the common way to calculate a dog's age in "human years" is to multiply the dog's age in years by 7. However, this
-  method is not entirely accurate as a dog's aging process varies based on its breed and size.
-
-  A more accurate way to estimate a dog's age is to use a breed-specific conversion chart. Here are the charts for
-  medium breeds:</p>
-<h3>Medium Breeds</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Age of dog (in years)</th>
-      <th>Equivalent age in human years</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>24</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>36</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>42</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>47</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>51</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>56</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>60</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>65</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>69</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>74</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>78</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>83</td>
-    </tr>
-  </tbody>
-</table>
-        </p>
-      </div>
-</div>
-
-<div class="hiddenDiv" id="largeDog"> <!---hidden div for large dog -->
-  <div class="content">
-    <p>
-For Large breeds, the common way to calculate a dog's age in "human years" is to multiply the dog's age in years by 7. However, this
-method is not entirely accurate as a dog's aging process varies based on its breed and size.
-
-A more accurate way to estimate a dog's age is to use a breed-specific conversion chart. Here are the charts for large breeds
-    </p>
-    <h3>Large Breeds</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Age of dog (in years)</th>
-          <th>Equivalent age in human years</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>14</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>22</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>31</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>38</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>45</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>49</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>56</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>64</td>
-        </tr>
-        <tr>
-          
-
   </div>
-</div>
-    
+
+  <div class="hiddenDiv" id="mediumDog"> <!---hidden div for medium dog -->
+    <div class="content">
+      <p>
+      <p>For medium dogs, the common way to calculate a dog's age in "human years" is to multiply the dog's age in years
+        by 7. However, this
+        method is not entirely accurate as a dog's aging process varies based on its breed and size.
+
+        A more accurate way to estimate a dog's age is to use a breed-specific conversion chart. Here are the charts for
+        medium breeds:</p>
+      <h3>Medium Breeds</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Age of dog (in years)</th>
+            <th>Equivalent age in human years</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>36</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>47</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>51</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>56</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>65</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>69</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>74</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>78</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>83</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+    </div>
+  </div>
+
+  <div class="hiddenDiv" id="largeDog"> <!---hidden div for large dog -->
+    <div class="content">
+      <p>
+        For Large breeds, the common way to calculate a dog's age in "human years" is to multiply the dog's age in years
+        by 7. However, this
+        method is not entirely accurate as a dog's aging process varies based on its breed and size.
+
+        A more accurate way to estimate a dog's age is to use a breed-specific conversion chart. Here are the charts for
+        large breeds
+      </p>
+      <h3>Large Breeds</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Age of dog (in years)</th>
+            <th>Equivalent age in human years</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>31</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>38</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>45</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>49</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>56</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>64</td>
+          </tr>
+          <tr>
+
+
+    </div>
+  </div>
+
   </main>
 </body>
 <footer>
