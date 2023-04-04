@@ -6,6 +6,7 @@
   --light: #443C68;
   --dark: #393053;
   --darkest: #18122B;
+  --text: #e6e6e6;
 }
 
 /* CSS Reset */
@@ -25,7 +26,7 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   background-color: var(--darkest);
-  color: whitesmoke;
+  color: var(--text);
 }
 
 .content {
@@ -64,7 +65,8 @@ h1 {
   height: auto;
   /* Set the height of the container to auto */
   margin: auto;
-  background-color: beige;
+  background-color: var(--dark);
+  color: var(--text);
 }
 
 .results {
@@ -123,5 +125,5 @@ tr:nth-child(even) {
 
 input{
   background-color: var(--darkest);
-  color: whitesmoke;
+  color: var(--text);
 }
