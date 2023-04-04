@@ -30,10 +30,14 @@ body {
 }
 
 .content {
-  text-align: center;
+  text-align: justify;
   max-width: 400px;
   margin: auto;
   justify-content: flex-start;
+}
+
+.content h3 {
+ text-align: center;
 }
 
 main {
@@ -72,6 +76,7 @@ h1 {
   border-radius: 1em;
   padding-left: 15px;
   padding-right: 15px;
+  
 }
 
 .results {
