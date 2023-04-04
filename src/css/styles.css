@@ -67,6 +67,11 @@ h1 {
   margin: auto;
   background-color: var(--dark);
   color: var(--text);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 1em;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .results {
