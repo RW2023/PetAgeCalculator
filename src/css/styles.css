@@ -1,13 +1,19 @@
 /* google font import */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,400;0,600;1,200&display=swap');
+:root {
+  --lightest: #635985;
+  --light: #443C68;
+  --dark: #393053;
+  --darkest: #18122B;
+}
 /* CSS Reset */
-* {
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+box-sizing: border-box;
 }
-/* End of CSS Reset */
+ /* End of CSS Reset */
 
 /* rest of stylesheet */
 body {
