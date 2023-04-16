@@ -41,11 +41,13 @@ function calculateDogAge() {
 // Calculate cat age function
 function calculateCatAge() {
   let catHumanAge = document.getElementById("catHumanAge").value;
-  let catAge = "";
+  let catAge = 0;
 
-  if (catHumanAge === 1) {
+  if (catHumanAge === "0") {
+    catAge = 0;
+  } else if (catHumanAge === "1") {
     catAge = 15;
-  } else if (catHumanAge === 2) {
+  } else if (catHumanAge === "2") {
     catAge = 24;
   } else {
     catAge = 24 + (catHumanAge - 2) * 4;
