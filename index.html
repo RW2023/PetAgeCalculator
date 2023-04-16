@@ -9,12 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Outfit&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./src/css/defaultTheme.css" id="theme-stylesheet">
   <title>Pet Age Calculator</title>
 </head>
 
 <body>
   <title>Pet Age Calculator</title>
+  <div>
+<select name="theme" id="theme-select" onchange="switchStylesheet()">
+  <option value="defaultTheme">Default Theme</option>
+  <option value="lightTheme">Light Theme</option>
+</select>
+  </div>
   <main>
     <h1 class="app__title">Pet Age Calculator</h1>
     <div id="dogAgeCalculator" class="calculator__dog">
@@ -289,8 +295,10 @@
   </main>
 </body>
 <footer>
+  <script src="./src/js/toggleStyles.js"></script>
   <script src="./src/js/app.js"></script>
-  <script src="/src/js/style.js"></script>
+  <script src="./src/js/style.js"></script>
+  
  
 </footer>
 
